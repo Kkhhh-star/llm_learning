@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "python_learning"
+name = "python-learning-ahsdkfdaifgah"
 version = "0.1.0"
 description = "My Awesome Project!"
 readme = "README.md"
@@ -8,6 +8,9 @@ license = "MIT"
 classifiers = [
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3.10",
+]
+packages = [
+    { include = "python_learning", from = "src" }
 ]
 
 [tool.poetry.dependencies]
@@ -33,3 +36,6 @@ python_files = "tests.py test_*.py *_tests.py"
 
 [tool.pylint.design]
 max-line-length = 120
+
+[tool.poetry.plugins.console_scripts]
+python_learning = "python_learning.cmdline:main"
